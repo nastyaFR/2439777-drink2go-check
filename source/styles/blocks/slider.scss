@@ -1,0 +1,59 @@
+.slider__button-prev,
+.slider__button-next {
+  border: none;
+  background-color: $flat-white;
+  width: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    background-color: transparent;
+    }
+}
+
+.slider__button-prev::before {
+  content: "";
+  position: absolute;
+  mask-image: url("../../icons/slider-arrow-left.svg");
+  mask-repeat: no-repeat;
+  top: 297px;
+  left: 4px;
+  width: 11px;
+  height: 20px;
+  background-color: $primary;
+
+  @media (min-width: $tablet-width) {
+    top: 250px;
+    left: 34px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 317px;
+      left: 34px;
+      }
+}
+
+.slider__button-next::before {
+  content: "";
+  position: absolute;
+  mask-image: url("../../icons/slider-arrow-right.svg");
+  mask-repeat: no-repeat;
+  top: 297px;
+  left: 5px;
+  width: 11px;
+  height: 20px;
+  background-color: $primary;
+
+  @media (min-width: $tablet-width) {
+    top: 250px;
+    left: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 317px;
+      left: 35px;
+      }
+}

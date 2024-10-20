@@ -1,5 +1,57 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: $white;
+  padding: 12px 22px 9px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 20px 0 20px;
+    }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 40px 0 40px;
+  }
+}
+
+.header__wrapper {
+  width: 278px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1440px;
+      margin: 0 auto;
+    }
+  }
+
+.header__logo {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 18px;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-decoration: none;
+    }
+    }
+
+.header__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: none;
+    width: 126px;
+    margin-bottom: 4px;
+  }
 }

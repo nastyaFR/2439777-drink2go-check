@@ -1,0 +1,251 @@
+.main-nav {
+  @media(max-width: $mobile-width-only) {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    }
+}
+
+.main-nav__toggle-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-right: 40px;
+    padding-left: 60px;
+    display: flex;
+    }
+
+  @media (min-width: $desktop-width) {
+    gap: 60px;
+    padding-left: 182px;
+    padding-right: 100px;
+    padding-top: 10px;
+  }
+}
+
+.main-nav__toggle-link {
+  color: $black;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  text-align: right;
+}
+
+.main-nav__toggle-link-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.24px;
+  }
+}
+
+.main-nav__toggle-link--user,
+.main-nav__toggle-link--basket {
+  @media (min-width: $tablet-width) {
+  width: 60px;
+  height: 38px;
+  }
+}
+
+.main-nav__toggle-link--user {
+  @media (min-width: $desktop-width) {
+    width: 72px;
+    height: 16px;
+  }
+}
+
+.main-nav__toggle-link--basket {
+  @media (min-width: $desktop-width) {
+    width: 89px;
+    height: 16px;
+  }
+}
+
+.main-nav__toggle-link--user::before {
+  position: absolute;
+  content: "";
+  mask-image: url("../../icons/user.svg");
+  mask-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-color: $black;
+  top: 10px;
+  right: 120px;
+
+  @media (min-width: $tablet-width) {
+    top: 10px;
+    right: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      right: 56px;
+    }
+}
+
+.main-nav__toggle-link--basket::before {
+  position: absolute;
+  content: "";
+  mask-image: url("../../icons/basket.svg");
+  mask-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-color: $black;
+  top: 10px;
+  right: 60px;
+
+  @media (min-width: $tablet-width) {
+    top: 10px;
+    right: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      right: 73px;
+    }
+}
+
+.main-nav__toggle {
+  display: block;
+  width: 16px;
+  height: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 1.5px;
+  background-color: $black;
+  box-shadow: 0 4.5px 0 0 #333333, 0 10px 0 0 #333333;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+.main-nav__opened .main-nav__list {
+  top: 0;
+  right: 0;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 7px;
+  right: 2px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -2px;
+    width: 16px;
+    height: 1.5px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  // &:active::before,
+  // &:active::after {
+  //   background-color: rgba(0, 0, 0, 0.3);
+  // }
+}
+
+.main-nav__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    min-width: 280px;
+    position: absolute;
+    z-index: 10;
+    flex-direction: column;
+    top: 49px;
+    right: -2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: wrap;
+    padding-left: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+.main-nav__item {
+
+  @media (max-width: $mobile-width-only) {
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 21px;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-top: 1px solid $secondary;
+    background-color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 20px 12px 20px;
+}
+
+@media (min-width: $desktop-width) {
+  padding: 10px 20px;
+}
+}
+
+.main-nav__item--current {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $primary;
+}
+}
+
+.main-nav__link {
+  color: $black;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+}
+
+.main-nav__item--current .main-nav__link {
+  @media (min-width: $tablet-width) {
+    color: $primary;
+}
+}

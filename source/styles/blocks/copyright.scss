@@ -1,0 +1,44 @@
+.copyright {
+  border-top: 1px solid $secondary;
+  padding-top: 17px;
+  margin: 0 -20px;
+
+  @media (min-width:$tablet-width) {
+    border-top: none;
+    padding-top: 7px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    margin: auto;
+  }
+}
+
+.copyright__link {
+  color: $grey;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  padding-left: 57px;
+
+  @media (min-width:$tablet-width) {
+    margin-right: 116px;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 0;
+  }
+}
+
+.copyright__link::after {
+  position: absolute;
+  content: "";
+  mask-image: url("../../icons/html-academy-logo.svg");
+  mask-repeat: no-repeat;
+  background-color: $grey;
+  width: 16px;
+  height: 16px;
+  top: 0;
+}
