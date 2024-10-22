@@ -1,7 +1,5 @@
 .product-card {
   background-color: $white;
-  padding: 40px 20px 20px 18px;
-  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -51,6 +49,12 @@
   @media (min-width: $tablet-width) {
     max-width: 287px;
     margin-bottom: 20px;
+  }
+}
+
+.product-card__description br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
   }
 }
 

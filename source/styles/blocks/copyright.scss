@@ -3,7 +3,7 @@
   padding-top: 17px;
   margin: 0 -20px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     border-top: none;
     padding-top: 7px;
     text-align: center;
@@ -23,11 +23,11 @@
   position: relative;
   padding-left: 57px;
 
-  @media (min-width:$tablet-width) {
-    margin-right: 116px;
+  @media (min-width: $tablet-width) {
+    padding: 0;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0;
   }
 }

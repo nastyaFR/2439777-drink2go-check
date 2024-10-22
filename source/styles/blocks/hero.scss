@@ -1,152 +1,140 @@
 .hero {
-  background-color: $flat-white;
-  display: flex;
-
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient(0deg, $white 248px, $flat-white 248px);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    }
-
-    @media (min-width: $desktop-width) {
-    background-color: $flat-white;
-    background-image: none;
-    }
-}
-
-.hero__wrapper {
-  padding: 20px 0 60px;
-  text-align: center;
-  display: flex;
-
-  @media (min-width: $tablet-width) {
-    padding: 60px 0 56px;
+    padding-bottom: 198px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 0 81px 0;
-  }
-}
-
-.hero__inner {
-  width: 280px;
-
-  @media (min-width: $tablet-width) {
-    width: 608px;
-    display: flex;
-    flex-direction: column-reverse;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 1280px;
-      display: flex;
-      flex-direction: row;
-      }
-}
-
-.hero__inner picture {
-  @media (min-width: $desktop-width) {
-    padding: 0 30px 0 25px;
+    padding-bottom: 49px;
   }
 }
 
 .hero__card {
+  text-align: center;
+  padding-right: 2px;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
+
   @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: self-end;
+    padding-top: 145px;
+    padding-left: 21px;
     text-align: left;
-    margin-top: 151px;
   }
 }
 
 .hero__subtitle {
   color: $primary;
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.48px;
-  margin: 5px 0 4px;
+  padding-top: 6px;
+  padding-bottom: 4px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 0;
-    }
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .hero__title {
+  margin: 0;
+  margin-top: 4px;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: 0.72px;
-  margin: 0;
-  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $black;
+  padding-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     font-size: 56px;
     line-height: 80px;
-    letter-spacing: 1.12px;
-    margin-bottom: 16px;
-    }
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .hero__description {
-  font-size: 14px;
-  line-height: 20px;
   margin: 0;
-  margin-bottom: 21px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: $black;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
-    margin-bottom: 21px;
-    }
+    width: 610px;
+    margin: 0 auto;
+  }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 40px;
+    text-align: left;
+    margin: 0;
   }
-}
-
-.hero__description br {
-  @media (max-width: $mobile-width-only) {
-  display: none;
-    }
 }
 
 .hero__price {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 25px;
+  padding-left: 43px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 189px;
-    margin-bottom: 19px;
-    }
+    justify-content: center;
+    padding-left: 0;
+  }
 
-    @media (min-width: $desktop-width) {
-      margin: 0;
-      width: 230px;
-    }
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-content: left;
+    align-self: self-start;
+    padding-top: 21px;
+    padding-left: 21px;
+  }
 }
 
 .hero__price-old {
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 32px;
+  text-align: left;
   color: $primary;
-  position: relative;
-}
-
-.hero__price-old::after {
-  position: absolute;
-  content: "";
-  border-top: 1px solid $primary;
-  width: 100%;
-  top: 16px;
-  left: 0;
+  text-decoration: line-through;
+  padding-top: 2px;
+  padding-right: 6px;
+  margin: 0;
 }
 
 .hero__price-new {
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 32px;
   font-weight: 600;
-  margin-left: 6px;
-  margin-right: auto;
+  line-height: 32px;
+  text-align: left;
+  counter-reset: $black;
+  padding-right: 22px;
+  margin: 0;
 }

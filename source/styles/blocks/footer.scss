@@ -1,11 +1,11 @@
 .footer {
   padding: 22px 20px 30px;
 
-  @media (min-width:$tablet-width) {
-    padding: 42px 20px 40px 20px;
+  @media (min-width: $tablet-width) {
+    padding: 42px 20px 40px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 40px;
   }
 }
@@ -14,12 +14,12 @@
   display: flex;
   padding-bottom: 18px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     justify-content: space-between;
     margin-right: 158px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     flex-direction: column;
     justify-content: start;
     margin-right: 0;
@@ -28,18 +28,18 @@
 }
 
 .footer__wrapper {
-  @media (min-width:$desktop-width) {
-  display: flex;
-  flex-wrap: wrap;
-justify-content: space-between;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .footer__column {
-  @media (min-width:$tablet-width) {
-  display: flex;
-  flex-wrap: wrap;
-justify-content: space-between;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -53,5 +53,21 @@ justify-content: space-between;
     text-transform: none;
     margin-top: 6px;
     margin-bottom: 51px;
+  }
+}
+
+.footer__title {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 50px;
+    margin-top: 5px;
   }
 }
